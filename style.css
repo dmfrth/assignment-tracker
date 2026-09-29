@@ -1,0 +1,46 @@
+/* this modifies the format of the body */
+body {
+    background-color: powderblue;
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 20px;
+    font-size: 20px;
+}
+
+/* this modifies the format of the header */
+header {
+    text-align: center;
+}
+
+/* changes everything inside of h1 to be a larger font */
+h1 {
+    font-size: 30px;
+}
+
+/* targets the <section> parts and adds a border around
+the text */
+section {
+    margin-top: 30px;
+    padding: 20px;
+    border: 3px solid #000000;
+}
+
+/* places the form text boxes on top of one another rather
+than side by side. also adds padding to separate the text a bit */
+form {
+    display:flex;
+    flex-direction: column;
+    gap: 7px; /* adds space between each box of the form */
+}
+
+button {
+    margin-top: 10px; /* adds space between the button and the box above it */
+    background-color:blue; /*changes button color*/
+}
+
+.assignment{
+    padding:15px;
+    margin-top: 10px;
+    border: 1px solid #000000;
+    border-radius: 8px;
+}
