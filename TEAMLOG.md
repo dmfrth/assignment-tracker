@@ -6,9 +6,9 @@
     - Ryan: 
 
 *  **Plan**:
-  *  *Goals for today:*
-    - Create our shared GitHub repository so we can both edit things.
-    - Start to create a general idea of what we want our website to look like.
+    - *Goals for today:*
+       - Create our shared GitHub repository so we can both edit things.
+       - Start to create a general idea of what we want our website to look like.
 
 * **Build**:
   * *Shipped:* 
