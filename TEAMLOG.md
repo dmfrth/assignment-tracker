@@ -28,5 +28,5 @@
     There's not much another developer should know about the application as of now, as today was used just to set up the repository. We do have a develop branch that's separate from the main branch so we can avoid any major errors before merging them with the main branch.
 
   * *Commitments before next Day 2:* What does each person need to complete, investigate, or bring back before the next team session?
-    - Danielle: 
+    - Danielle: Get a handle on the process of HTML coding so we can begin adding things to  our site.
     - Ryan: Brainstorm feature ideas for website, and a have a loose idea of how to code them.
