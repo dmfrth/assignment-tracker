@@ -3,7 +3,7 @@
 *  **Scribe:** Danielle
 *  **Standup:**
     - Danielle: We have an idea for our website, but we need to figure out how to create our shared GitHub repository before we go any further. From then on we can create an idea for the website layout and go from there.
-    - Ryan: 
+    - Ryan: Shared git repository is (mostly) functional, will start brainstorming feature ideas for the project
 
 *  **Plan**:
     - *Goals for today:*
@@ -29,4 +29,4 @@
 
   * *Commitments before next Day 2:* What does each person need to complete, investigate, or bring back before the next team session?
     - Danielle: 
-    - Ryan: 
+    - Ryan: Brainstorm feature ideas for website, and a have a loose idea of how to code them.
