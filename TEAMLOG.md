@@ -1,63 +1,23 @@
-## 2026-09-24 Day 2 Workshop:
-*  **Present:** Danielle, Ryan
-*  **Scribe:** Danielle
-*  **Standup:**
-    - Danielle: We have an idea for our website, but we need to figure out how to create our shared GitHub repository before we go any further. From then on we can create an idea for the website layout and go from there.
-    - Ryan: Shared git repository is (mostly) functional, will start brainstorming feature ideas for the project
+# TEAMLOG 
 
-*  **Plan**:
-    - *Goals for today:*
-       - Create our shared GitHub repository so we can both edit things.
-       - Start to create a general idea of what we want our website to look like.
+## 10/1
 
-* **Build**:
-  * *Shipped:* 
-    - Created an assignment-tracker folder with an index.html, TEAMLOG.md, script.js, and style.css files and pushed them all to GitHub.
-    - Successfully created a shared GitHub repository.
-    - Thought of some ideas of a website layout.
+**Present: Danielle, Ryan
+Scribe: Ryan
+Standup**
 
-* **Review**:
-  * *Reviewed:* 
-    - Ryan reviewed the GitHub repository and downloaded the files to his computer so we can switch roles next week and get a good start on our website.
-  * *Integration check:*
-    - The repository was successfully set up on both ends.
-  * *Clean-clone check:*
-    - Nothing to be run by following the README yet.
+* Partner 1:Danielle : Get a basic version of the website up.
+* Partner 2:Ryan : Scribe, test the website, come up with new ideas for next week
+**Goals for today:** Create a functioning add assignment button, code the headers for the website
+**Shipped:** 
+* Basic skeleton of the website is up
+List of ideas is written down in "Ideas" text file on git
+**Reviewed:** 
+Danielle : Created and Reviewed add assignment button, made sure it worked
+Ryan : Tested the website and added Ideas text file
+**Clean-clone check:** PASS
+**Handoff package:** When the website is refreshed , nothing is saved, try the add assignment button.
+**Commitments before next Day 2:**
+Add Ideas text file
 
-* **Handoff package:**
-    There's not much another developer should know about the application as of now, as today was used just to set up the repository. We do have a develop branch that's separate from the main branch so we can avoid any major errors before merging them with the main branch.
-
-  * *Commitments before next Day 2:* 
-    - Danielle: Get a handle on the process of HTML coding so we can begin adding things to  our site.
-    - Ryan: Brainstorm feature ideas for website, and a have a loose idea of how to code them.
-
-## 2026-10-01 Day 2 Workshop:
-*  **Present:** Danielle, Ryan
-*  **Scribe:** Ryan
-*  **Standup:**
-    - Danielle: 
-    - Ryan: 
-
-*  **Plan**:
-    - *Goals for today:*
-       - 
-
-* **Build**:
-  * *Shipped:* 
-    - 
-
-* **Review**:
-  * *Reviewed:* 
-    - 
-  * *Integration check:*
-    - 
-  * *Clean-clone check:*
-    - 
-
-* **Handoff package:**
-    
-
-  * *Commitments before next Day 2:* 
-    - Danielle: 
-    - Ryan: 
 
