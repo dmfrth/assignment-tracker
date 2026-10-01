@@ -1,0 +1,8 @@
+Ideas
+Store : Class , Assignment Name, Due Date on a “Note”
+Button to sort by : Class or Due date
+Button to pick a random assignment to do
+
+Cosmetic
+Different Colors / Icons per due date / class (Optional in a settings menu, would have to hold settings data)
+Ability to move notes wherever on the board so you can sort them, or sort them automatically (Store location data as X/Z)
