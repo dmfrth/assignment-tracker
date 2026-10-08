@@ -62,3 +62,35 @@
   * *Commitments before next Day 2:* 
     - Danielle: Review the readings posted to get a better idea on coding in html.
     - Ryan: Add "ideas" text file for future use.
+
+## 2026-10-08 Day 2 Workshop:
+*  **Present:** Danielle, Ryan
+*  **Scribe:** Danielle
+*  **Standup:**
+    - Danielle: We need to take a look at the requirements for the Module 2 project submission and make sure we're on track for the due date.
+    - Ryan: We need to make some cosmetic changes as the layout is super ugly right now.
+
+*  **Plan**:
+    - *Goals for today:*
+       - Change the cosmetics of the site in styles.css so it looks better.
+       - Use a mobile-first approach when making these changes and additions.
+
+* **Build**:
+  * *Shipped:*
+    - Cosmetic changes were made, looks much better now.
+    - Everyone is aware of what needs to be done before the due date.
+
+* **Review**:
+  * *Reviewed:*
+    - Danielle made sure the add assignment button is still functional after the updates were made.
+  * *Integration check:*
+    - The repository was successfully updated with a new cosmetic-branch added for the changes that were made.
+  * *Clean-clone check:*
+    - PASS
+
+* **Handoff package:**
+      The site is much easier to read now and the buttons we had previously still work.
+
+  * *Commitments before next Day 2:*
+    - Danielle: Look over the requirements for Module 2 Project, and make a list of exactly what's left to do before the due date to next week's session.
+    - Ryan: Make sure we are using semantic landmark elements to make the site accessible and look into Flexbox and CSS Grid some more so we can continue the cosmetic changes to make our website look more appealing.
