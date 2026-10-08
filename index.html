@@ -1,69 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<header>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Assignment Tracker</title>
+<!-- if the </li> isn't at the end, the card does not stop, so currently 1 and 2 are merged -->
+<ul class="cards">  
+    <li class="card"><h1>Assignment Tracker<p>Keep track of your assignments and deadlines.</p>
+    <li class="card"><h2>Add Assignment</h2><p>Leaving this text here to show that this is an early re-design</p></li>
+    
 
-    <!--This links the html file to the style sheet so we can change
-    what things look like on the website-->
-    <link rel="stylesheet" href="style.css">
-</head>
+	<form><h2><li class="card">
+	<label for="assignment-name">Assignment Name:</label>
+	<input type="text" id="assignment-name">
+	
+	<label for="course">Course:</label>
+	<input type="text" id="course">
 
-<body>
+	<label for="due-date">Due Date:</label>
+	<input type="date" id="due-date">
+	<button type="submit">Add Assignment</button>
 
-    <!-- The top of our website -->
-    <header>
-        <h1>Assignment Tracker</h1>
-        <p>Keep track of your assignments and due dates.</p>
-    </header>
+	</form></h2></li></p>
 
-    <!-- The main content of our website -->
-    <main>
+	<!-- Dev notes in order for the assignment input -->
 
-        <!-- Section for adding a new assignment -->
-        <section>
-            <h2>Add Assignment</h2> <!-- Label for what this section is for-->
-
-            <form> <!--Use this to collect assignments from user and submit to the server-->
-           
-            <!--The label tells the user what we want for input-->
-                <label for="assignment-name">Assignment Name:</label>
-
-            <!--This creates the box where the user types their input-->
-                <input type="text" id="assignment-name">
-
-            <!--Lets the user type in the course name for the assignment (add a dropdown menu later instead?)-->
-                <label for="course">Course:</label>
-                <input type="text" id="course">
-
-            <!--We use type="date" here instead of text so the user can select the date from a date picker rather than typing
+          <!--(Form) Use this to collect assignments from user and submit to the server-->
+          <!--The label tells the user what we want for input-->
+          <!--This creates the box where the user types their input-->
+          <!--Lets the user type in the course name for the assignment (add a dropdown menu later instead?)-->         
+          <!--We use type="date" here instead of text so the user can select the date from a date picker rather than typing
             in the date, allows for less user error-->
-                <label for="due-date">Due Date:</label>
-                <input type="date" id="due-date">
-
-            <!--this button allows the user to submit the form they just filled out. works now, that
+          <!--this button allows the user to submit the form they just filled out. works now, that
             function has been added in the script.js file-->
-                <button type="submit">Add Assignment</button>
+             
+	
+<li class="card"><h1>My Assignments<p>Your assignments will appear below.</p></p>
+	
 
-            </form>
-        </section>
+	
+    	</ul></header><body>
 
-        <!-- Section for displaying assignments -->
-        <section>
-            <h2>My Assignments</h2>
+<link rel="stylesheet" href="style.css">
+<!--This links the html file to the style sheet so we can change what things look like on the website-->
 
-            <div id = "assignment-list"> <!--gives the script file a container to save new assignments-->
-                <p>Your assignments will appear here.</p>
-            </div>
+<!-- Section for displaying assignments -->
 
-        </section>
+<h2><li class="card">
+	<div id = "assignment-list"></div> 	<!--gives the script file a container to save new assignments-->
+	     
+	<script src="script.js"></script> 	<!-- connects this index.html file to the script file-->
+</h2></li></p>
 
-    </main>
 
-    <script src="script.js"></script> <!-- connects this index.html file to the script file-->
+
+
+
+
+           
+        
+	
+
+	
 
 
 </body>
