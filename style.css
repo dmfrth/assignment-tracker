@@ -1,40 +1,222 @@
-/* Cosmetic baseline only. Your layout work goes at the bottom. */
+/* custom properties here (values changed here will update everywhere they are used) */
+/* root is where resuable variables for colors, fonts, sizing, spacing, and other cutomizations are stored. */
+/* using these will help keep us more organized */
+:root {
+  --color-bg: #000000; /* main background color */
+  --color-surface: #1f2430; /* surface color */
+  --color-text: #ffffff; /* main text color */
+  --color-text-muted: #9ca3af; /* secondary text color */
+  --color-accent: #60a5fa; /* accent color */
+  --color-accent-text: #0b1020; /* text color used on accent backgrounds */
+  --color-border: #3b4252; /* border color */
+
+  /* default font and typography scale */
+  --font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-md: 1.25rem;
+  --font-size-lg: 1.5rem;
+  --font-size-xl: 2rem;
+
+  /* spacing values for margins, padding, and gaps */
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --radius: 0.5rem;
+
+  /* more spcaing and maximum content width options */
+  --space-xl: 2.5rem;
+  --max-width: 75rem;
+}
+
+/* base styles here */
+/* padding and borders count as part of an element's total width and height */
 * { box-sizing: border-box; }
 
+/* creates a standard for overall page spacing, font, background, and text color */
 body {
   margin: 0;
-  padding: 1.5rem;
-  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-  background: #000000;
-  color: #fff;
+  padding: var(--space-lg);
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  background: var(--color-bg);
+  color: var(--color-text);
 }
 
-h1 { font-size: 1.5rem; }
-ul { list-style: none; padding: 0; margin: 0; }
-a  { text-decoration: none; color: inherit; }
+/* consistent heading sizes and spacing */
+h1 { font-size: var(--font-size-lg); margin: 0 0 var(--space-sm); }
+h2 { font-size: var(--font-size-md); margin: 0 0 var(--space-sm); }
+h3 { font-size: var(--font-size-base); margin: 0 0 var(--space-sm); }
+ul { list-style: none; color: var(--color-accent); } /* default list markers are removed, gives the list text the accent color */
+a { text-decoration: none; color: var(--color-accent); } /* removes the underline from links and applies accent color to links */
 
+/* components here */
+/* styles the header containing the title, description, and navigation */
 .site-header {
-  background: #1f2430;
-  color: #fff;
-  padding: 1rem 1.25rem;
-  border-radius: 0.5rem;
-  margin-bottom: 1.5rem;
+  background: var(--color-surface);
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--radius);
+  margin-bottom: var(--space-lg);
 }
-.brand { font-weight: 700; margin: 0; }
+.brand { font-weight: 700; } /* makes the main heading bold */
 
+/* gives each main content card a background, rounded corners, and padding */
 .card {
-  background: #1f2430;
-  border-radius: 0.5rem;
-  padding: 1.25rem;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  padding: var(--space-lg);
 }
-.card h2 { font-size: 1.05rem; margin: 0 0 0.4rem 0; }
-.card p  { margin: 0; font-size: 0.9rem; color: #4b5563; }
 
-/* ============================================
-   YOUR WORK STARTS HERE
-   1. Make .nav ul a horizontal row, evenly spaced
-   2. Make .cards a three-column grid on desktop
-   3. Mobile-first: single column base, 3 columns at 768px and up
-   4. Define at least two custom properties in :root and use them
-   ============================================ */
+/* styles paragraphs inside of cards to be smaller and muted text */
+.card p {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.form-field { margin-bottom: var(--space-md); } /* adds space below each form field so it's less crowded */
+.form-field label { display: block; margin-bottom: var(--space-sm); } /* places the form labels on their own lines above the input */
+.form-field input { /* makes form inputs fill their container and provides consistent styling */
+  width: 100%;
+  padding: var(--space-sm);
+  font-size: var(--font-size-base);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+/* consistent styling of buttons on the website */
+button {
+  padding: var(--space-sm) var(--space-md);
+  font-size: var(--font-size-base);
+  background: var(--color-accent);
+  color: var(--color-accent-text);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+/* adds padding and a bottom border to each assignment item */
+.assignment {
+  padding: var(--space-md) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* displays a visible outline where keyboard users focus on links, buttons, etc. it helps the user identify what element they are currently focused on */
+a:focus-visible, button:focus-visible, input:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* mobile first (320px+) layout here */
+main, .site-header, footer {
+  max-width: var(--max-width);
+  margin-inline: auto;
+}
+
+/* use flexbox to put nav links in a single row here */
+/* flex wrap allows links to move onto another line when space is limited, gap adds consitent spacing between the links */
+.nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+}
+
+.nav a { /* nav links are easier to see because of added padding and borders */
+  display: inline-block;
+  padding: var(--space-sm) var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+/* use grid here to put cards in a single column on mobile */
+/* css grid puts form and assignment list in the left column by default, content will be stacked on smaller screens */
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+
+/* buttons fill the available width */
+button { width: 100%; }
+
+/* adds space above the footer and styles the text */
+footer {
+  margin-top: var(--space-xl);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+/* assignment list and filter */
+.filter-field {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin: var(--space-md) 0;
+}
+
+/* adds padding, font size, and borders to the filter drop down */
+.filter-field select {
+  padding: var(--space-sm);
+  font-size: var(--font-size-base);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+.assignment {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.assignment-details { flex: 1; }
+.assignment-input[type="checkbox"] {
+  width: 1.5rem;
+  height: 1.5 rem;
+  flex-shrink: 0;
+}
+
+.assignment.is-complete h3 {
+  text-decoration: line-through;
+  color: var(--color-text-muted);
+}
+
+.delete-button {
+  width: auto;
+  background: transparent;
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+}
+
+/* tablet/ipad (768px+) layout here*/
+@media (min-width: 768px) {
+  body { padding: var(--space-xl); }
+
+  /* flexbox here for title on left and nav on right */
+  .site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-lg);
+  }
+
+  .nav ul { margin-top: 0; }
+
+  /* grid here for two columns of equal size */
+  .cards { grid-template-columns: repeat(2, 1fr); }
+
+  button { width: auto; }
+}
+
+/* desktop (1200px+) layout here*/
+@media (min-width: 1200px) {
+  h1 { font-size: var(--font-size-xl); }
+
+  /* use grid here to create a small form column and wide list column */
+  .cards { grid-template-columns: 1fr 2fr; };
+
+}
+
+
+
+

@@ -1,1 +1,18 @@
 This is the shared repository for our assignment tracker website application for CSC 3050.
+
+## Module 2 Project Reflection:
+**Structural Decisions**
+While building the Assignment Tracker web application, we organized the HTML into semantic HTML elements to make the website easier to understand and navigate. We used a <header> for the website title, description, and navigation links, a <main> element for the primary content on the site, and a <footer> to list our names as the creators of the site. Inside the main element there are two <section> elements. One of them is for adding assignments, and the other is for viewing them. Using this separated structure helped us keep track of the main features of the application and made the HTML easier to read overall. 
+
+Accessibility was an important part of sorting out our semantic elements and creating the interface. Each form input has a corresponding <label> so users can identify what information they need to enter. We also used the aria-labelledby and aria-label attributes to associate each main section with its heading and to give the buttons and checkboxes accessible names. The aria-live="polite" attribute allows screen readers to announce changes to a message without causing an interruption. Decisions like these are what make the application easier to understand for those who may rely on assistive technology such as screen readers.
+
+**Flexbox and CSS Grid Implementation**
+We used both Flexbox and CSS Grid because each one solves different problems when it comes to creating a layout. Flexbox was useful for arranging elements in a single row or column. We used it to organize the navigation links in a row, to align header content on different sized screens, and position each assignment's checkbox, details, and delete button next to one another. It was also useful for keeping these elements aligned properly and having consistent spacing between them.
+
+CSS Grid was useful for organizing the two main cards containing the assignment form and assignment list. We started with a simple single column layout for smaller screens and used media queries to adjust the layout for larger screens. At widths of 768+ pixels, the cards change to two equal columns. At 1200+ pixels, the layout changes so that the assignment list has twice as much space as the assignment form. We decided to do it this way because the assignment list can contain more information than the form. The mobile-first CSS and min-width media queries help adjust the layout for different screen sizes without relying on a complicated CSS framework.
+
+**Challenges we Faced**
+One thing we struggled with was correctly updating the assignment list when users interacted with it. There were a few times where we made changes and the add assignment button stopped working. We were able to address this issue by separating the JavaScript into functions with specific responsibilities. For example, addAssignment() stores new assignments, deleteAssignment() removes them, and toggleAssignment() updates their completion status with a checkbox. The render() function rebuilds the list based on the current assignment data and any selected filter.
+
+We also used event listeners to actually make the website respond when a user does some specific interaction. Rather than attaching multiple different listeners to every Delete button, we placed one click listener in the assignment list and identified which button was clicked. Separating the data management from rendering made the code easier to understand and helped us keep the interface consistent after each user interaction. 
+
