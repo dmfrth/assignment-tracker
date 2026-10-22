@@ -116,10 +116,8 @@ The site is much easier to read now and the buttons we had previously still work
 
     * Danielle: Look over the requirements for Module 2 Project, and make a list of exactly what's left to do before the due date to next week's session.
     * Ryan: Make sure we are using semantic landmark elements to make the site accessible and look into Flexbox and CSS Grid some more so we can continue the cosmetic changes to make our website look more appealing.
-* ## 2026-10-15 Day ? Workshop:
 
-\*All of the days before this are day two? It's day something today
-
+## 2026-10-15 Day 2 Workshop:
 
 * **Present:** Danielle, Ryan
 * **Scribe:** Ryan
@@ -153,12 +151,43 @@ The site is much easier to read now and the buttons we had previously still work
 * **Handoff package:**
 The site is much easier to read now and the buttons we had previously still work.
 
-  * *Commitments before next Day ?:*
+  * *Commitments before next Day 2:*
 
     * Danielle: Figure out how to save the assignments per user, so that it does not reset every time you open it
     * Ryan: Not actually super sure what to do now, I will look into ideas and I think all thats left are more "fun" cosmetic changes
 
+## 2026-10-22 Day 2 Workshop:
 
+* **Present:** Danielle, Ryan
+* **Scribe:** Danielle
+* **Standup:**
 
----
+  * Danielle: We need to work on the Handoff Package.
+  * Ryan: We need to work on the Handoff Package.
+* **Plan**:
+
+  * *Goals for today:*
+
+    * Get a good jump on the Handoff Package, including the summary as well as updating the README.
+* **Build**:
+
+  * *Shipped:*
+
+    * No changes to the site itself, but we did write a summary for the Handoff package and update the README so anyone can understand how our web application works and how to install and use it.
+* **Review**:
+
+  * *Reviewed:*
+
+    * Ryan wrote the README, which Danielle looked over and approved. Danielle wrote the summary, which Ryan looked over and approved.
+
+  * *Clean-clone check:*
+
+    * PASS
+* **Handoff package:**
+Everything still works as expected, and now there are some updates to the Handoff package so whoever inherits our site will be able to understand it. 
+
+  * *Commitments before next Day 2:*
+
+    * Danielle: Look into the videos and readings for Module 3 so we can be prepared for next week's tasks.
+    * Ryan: Finish any final "clean up" tasks before handing off the site
 
