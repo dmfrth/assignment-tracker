@@ -1,18 +1,42 @@
-This is the shared repository for our assignment tracker website application for CSC 3050.
 
-## Module 2 Project Reflection:
-**Structural Decisions**
-While building the Assignment Tracker web application, we organized the HTML into semantic HTML elements to make the website easier to understand and navigate. We used a <header> for the website title, description, and navigation links, a <main> element for the primary content on the site, and a <footer> to list our names as the creators of the site. Inside the main element there are two <section> elements. One of them is for adding assignments, and the other is for viewing them. Using this separated structure helped us keep track of the main features of the application and made the HTML easier to read overall. 
 
-Accessibility was an important part of sorting out our semantic elements and creating the interface. Each form input has a corresponding <label> so users can identify what information they need to enter. We also used the aria-labelledby and aria-label attributes to associate each main section with its heading and to give the buttons and checkboxes accessible names. The aria-live="polite" attribute allows screen readers to announce changes to a message without causing an interruption. Decisions like these are what make the application easier to understand for those who may rely on assistive technology such as screen readers.
+## Read Me!
 
-**Flexbox and CSS Grid Implementation**
-We used both Flexbox and CSS Grid because each one solves different problems when it comes to creating a layout. Flexbox was useful for arranging elements in a single row or column. We used it to organize the navigation links in a row, to align header content on different sized screens, and position each assignment's checkbox, details, and delete button next to one another. It was also useful for keeping these elements aligned properly and having consistent spacing between them.
+**Hello! If you're reading this, you've inherited our site.** 
+This is the developer note area , so i'll try to give a quick rundown on what the site does / can do, what how to get it working, and what we had planned for future updates.
 
-CSS Grid was useful for organizing the two main cards containing the assignment form and assignment list. We started with a simple single column layout for smaller screens and used media queries to adjust the layout for larger screens. At widths of 768+ pixels, the cards change to two equal columns. At 1200+ pixels, the layout changes so that the assignment list has twice as much space as the assignment form. We decided to do it this way because the assignment list can contain more information than the form. The mobile-first CSS and min-width media queries help adjust the layout for different screen sizes without relying on a complicated CSS framework.
 
-**Challenges we Faced**
-One thing we struggled with was correctly updating the assignment list when users interacted with it. There were a few times where we made changes and the add assignment button stopped working. We were able to address this issue by separating the JavaScript into functions with specific responsibilities. For example, addAssignment() stores new assignments, deleteAssignment() removes them, and toggleAssignment() updates their completion status with a checkbox. The render() function rebuilds the list based on the current assignment data and any selected filter.
+**Getting the site running :** 
+The current branch that is being worked on is called "website-development" hopefully, by the time you're reading this, it will all have been moved into a new branch called "Hand-off", and that should be the one you're using. If it isn't, website-development should work fine as well.
 
-We also used event listeners to actually make the website respond when a user does some specific interaction. Rather than attaching multiple different listeners to every Delete button, we placed one click listener in the assignment list and identified which button was clicked. Separating the data management from rendering made the code easier to understand and helped us keep the interface consistent after each user interaction. 
+Step 1 : Download all files in the branch, and put them into a folder on your computer
+Step 2 : Open index, this is the site itself. If you wish to edit it, open it in an external program or with notepad, and get to it
+
+You should also find script and style, if you wish to change those as well.
+
+**File Notes :** 
+Index : The site itself, and its semantics to make it look nice
+Style : The stylization , as used in index
+Script : The functional code of the site (backend)
+Teamlog : Notes from each weekly turn in
+Ideas : Future ideas for the site (This was made week one, might be outdated)
+
+**Site Usage :** 
+
+The site, obvious if you open it, is meant to be a tracker for assignments
+The left side has an input for class, assignment name, and due date, and the right side sorts them by whats due first
+The "Add asignment" and "My assignment" buttons on the top right will move your screen to each section (This is easier to see on mobile or if you are very zoomed in)
+The "Show" button sorts assignments by completion, or hides ones you don't want to see.
+
+**Future Plans :** 
+These are yours now, if you chose to do them (Think of this as ideas but updated)
+An optional light / dark mode
+The assignments actually being saved somewhere instead of being lost when you close the tab
+An update to the "Show" button that lets you show particular classes
+A more visible "Timer" of when each assignment is due, maybe a badge or visual indicator of time
+
+
+
+
+
 
