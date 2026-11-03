@@ -34,7 +34,7 @@ List all assignments. Optional query: `?status=active|completed`.
 Request body: `{ "name": "Essay 2", "course": "ENG 101", "dueDate": "2026-11-15" }`
 (`completed` is optional and defaults to `false`.)
 - **201 Created** → `{ ...assignment }` (includes the new `id`)
-- **400 Bad Request** (missing/empty fields, bad date format, malformed JSON) → validation error shape above
+- **400 Bad Request** → missing/empty fields or a bad date format return the validation shape with `fields`; malformed JSON returns only `{ "error": { "message": "Malformed JSON in request body" } }`
 
 ### PATCH /api/assignments/:id
 Partial update. Body contains any subset of `name`, `course`, `dueDate`, `completed`
@@ -50,3 +50,12 @@ Partial update. Body contains any subset of `name`, `course`, `dueDate`, `comple
 
 ## Any unexpected server failure
 - **500 Internal Server Error** → `{ "error": { "message": "Internal server error" } }`
+
+
+## Additional behavior
+- **Unknown routes** under `/api` return **404** → `{ "error": { "message": "Route not found: GET /api/banana" } }`.
+- `fields` appears only for field-level validation failures. Other 400 errors (invalid id, invalid `status`, malformed JSON, empty or non-object body) contain only `message`.
+- `name` and `course` are trimmed of leading and trailing whitespace. Unknown properties in a request body are ignored.
+- `dueDate` must be a real calendar date in `YYYY-MM-DD` format (for example, `2026-02-31` is rejected).
+- `GET /api/assignments` returns assignments in insertion order. The client is responsible for sorting by due date.
+- On `PATCH`, the body is validated first (400) and then the id is looked up (404).
