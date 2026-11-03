@@ -6,6 +6,7 @@ import AssignmentDetailPage from "./pages/AssignmentDetailPage.jsx";
 import EditAssignmentPage from "./pages/EditAssignmentPage.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
 
+// this is basically a map, tells which page to show for each url
 export default function App() {
   return (
     <Routes>

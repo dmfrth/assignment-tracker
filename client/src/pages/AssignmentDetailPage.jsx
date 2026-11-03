@@ -3,28 +3,32 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import { deleteAssignment } from "../api/assignmentsApi.js";
 import useAssignment from "../hooks/useAssignment.js";
 
+// shows one full assignment with edit and delete buttons
 export default function AssignmentDetailPage() {
-  const { id } = useParams(); 
-  const navigate = useNavigate();
+  const { id } = useParams(); // the :id from the url
+  const navigate = useNavigate(); // lets us send the user to another page
   const { assignment, loading, error, retry } = useAssignment(id);
 
   const [deleting, setDeleting] = useState(false);
   const [actionError, setActionError] = useState(null);
 
+  // called when Delete is clicked
   async function handleDelete() {
+    // asks for confirmation first! does nothing if the user cancels the deletion
     if (!window.confirm(`Delete "${assignment.name}"? This cannot be undone.`)) return;
 
     setDeleting(true);
     setActionError(null);
     try {
       await deleteAssignment(assignment.id);
-      navigate("/");
+      navigate("/"); // navigates back to list once the item is deleted
     } catch (err) {
       setActionError(`Could not delete: ${err.message}`);
       setDeleting(false);
     }
   }
 
+  // shows the loading staste while the assignment is being fetched
   if (loading) {
     return (
       <section className="card">
@@ -33,6 +37,7 @@ export default function AssignmentDetailPage() {
     );
   }
 
+  // error state 404 means it doesn't exist, anything else gets a try again button
   if (error) {
     const notFound = error.status === 404;
     return (
@@ -48,6 +53,7 @@ export default function AssignmentDetailPage() {
     );
   }
 
+  // success state: shows the assignment's details
   return (
     <section className="card" aria-labelledby="detail-heading">
       <h2 id="detail-heading">{assignment.name}</h2>

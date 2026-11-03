@@ -1,37 +1,45 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
+// what each field starts at when no starting values are given
 const EMPTY_VALUES = { name: "", course: "", dueDate: "" };
 
+// this form is used by the create page and edit page
+//initialValues: what the fields start as (empty for create, existing data for edit)
+//onSubmit: an async function that talks to the API (it throws if the request fails)
+//submitLabel: the text on the submit button
+//cancelTo: where the Cancel link goes
 export default function AssignmentForm({
   initialValues = EMPTY_VALUES,
   onSubmit,
   submitLabel,
   cancelTo,
 }) {
-  const [values, setValues] = useState(initialValues);
-  const [fieldErrors, setFieldErrors] = useState({}); 
-  const [submitError, setSubmitError] = useState(null); 
-  const [submitting, setSubmitting] = useState(false);
+  const [values, setValues] = useState(initialValues); // what's currently typed in the fields
+  const [fieldErrors, setFieldErrors] = useState({}); // per-field messages from the server
+  const [submitError, setSubmitError] = useState(null); // overall failure message
+  const [submitting, setSubmitting] = useState(false); // true while the request is in flight
 
+  // this runs on every single keystroke, one function can update any field
   function handleChange(event) {
     const { name, value } = event.target;
     setValues((current) => ({ ...current, [name]: value }));
   }
 
+  // runs when the form is submitted
   async function handleSubmit(event) {
-    event.preventDefault(); 
+    event.preventDefault(); // stops browser from reloading page
     setSubmitting(true);
-    setFieldErrors({});
+    setFieldErrors({}); // clear old errors before trying again
     setSubmitError(null);
 
     try {
       await onSubmit(values);
-      
+      // on success the page navigates away so there is nothing else to do here
     } catch (err) {
       if (err.fields) setFieldErrors(err.fields); 
       setSubmitError(err.message);
-      setSubmitting(false); 
+      setSubmitting(false); // lets the user fix the problem and try again
     }
   }
 

@@ -1,5 +1,6 @@
 import { NavLink, Outlet } from "react-router-dom";
 
+// this is the header, navigation, and footer that appear on every page
 export default function Layout() {
   return (
     <>
