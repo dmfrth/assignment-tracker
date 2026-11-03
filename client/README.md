@@ -1,16 +1,58 @@
-# React + Vite
+# Assignment Tracker (Milestone 2)
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+This assignment tracker uses a React single page app which talks to an Express REST API. Assignments have a name, course, due date, and completion status.
 
-Currently, two official plugins are available:
+Created by Danielle Forth and Ryan Sobocienski
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Project Outline
+```
+assignment-tracker/
+    client/         React single page application
+    server/         Express REST API and Vitest tests
+    docs/           API contract and debugging analysis
+```
 
-## React Compiler
+## Prerequisites
+- Node.js
+- Git
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Setup
 
-## Expanding the Oxlint configuration
+From the project's root folder, install each tier's dependencies using these commands:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+```bash
+cd client
+npm install
+cd ..
+cd server
+npm install
+cd ..
+```
+
+## Running the application
+
+This application needs both client and server running at the same time, so we need to use two separate terminals.
+
+**Terminal 1: API (localhost:3001)**
+```bash
+cd server
+npm run dev
+```
+**Terminal 2: React app (localhost:5173)**
+```bash
+cd client
+npm run dev
+```
+
+Then, open **http://localhost:5173/** in your browser.
+
+To stop a server, click into its terminal and press 'Ctrl + C'.
+
+## Running the tests
+
+```bash
+cd server
+npm test
+```
+
+All tests should pass, the tests do not need the server to be running.
