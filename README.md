@@ -1,42 +1,62 @@
+# Assignment Tracker (Milestone 2)
 
+This assignment tracker uses a React single page app which talks to an Express REST API. Assignments have a name, course, due date, and completion status.
 
-## Read Me!
+Created by Danielle Forth and Ryan Sobocienski
 
-**Hello! If you're reading this, you've inherited our site.** 
-This is the developer note area , so i'll try to give a quick rundown on what the site does / can do, what how to get it working, and what we had planned for future updates.
+## Project Outline
+```
+assignment-tracker/
+    client/         React single page application
+    server/         Express REST API and Vitest tests
+    docs/           API contract and debugging analysis
+```
 
+## Prerequisites
+- Node.js
+- Git
 
-**Getting the site running :** 
-The current branch that is being worked on is called "website-development" hopefully, by the time you're reading this, it will all have been moved into a new branch called "Hand-off", and that should be the one you're using. If it isn't, website-development should work fine as well.
+## Setup
 
-Step 1 : Download all files in the branch, and put them into a folder on your computer
-Step 2 : Open index, this is the site itself. If you wish to edit it, open it in an external program or with notepad, and get to it
+From the project's root folder, install each tier's dependencies using these commands:
 
-You should also find script and style, if you wish to change those as well.
+```bash
+cd client
+npm install
+cd ..
+cd server
+npm install
+cd ..
+```
 
-**File Notes :** 
-Index : The site itself, and its semantics to make it look nice
-Style : The stylization , as used in index
-Script : The functional code of the site (backend)
-Teamlog : Notes from each weekly turn in
-Ideas : Future ideas for the site (This was made week one, might be outdated)
+## Running the application
 
-**Site Usage :** 
+This application needs both client and server running at the same time, so we need to use two separate terminals.
 
-The site, obvious if you open it, is meant to be a tracker for assignments
-The left side has an input for class, assignment name, and due date, and the right side sorts them by whats due first
-The "Add asignment" and "My assignment" buttons on the top right will move your screen to each section (This is easier to see on mobile or if you are very zoomed in)
-The "Show" button sorts assignments by completion, or hides ones you don't want to see.
+**Terminal 1: API (localhost:3001)**
+```bash
+cd server
+npm run dev
+```
+**Terminal 2: React app (localhost:5173)**
+```bash
+cd client
+npm run dev
+```
 
-**Future Plans :** 
-These are yours now, if you chose to do them (Think of this as ideas but updated)
-An optional light / dark mode
-The assignments actually being saved somewhere instead of being lost when you close the tab
-An update to the "Show" button that lets you show particular classes
-A more visible "Timer" of when each assignment is due, maybe a badge or visual indicator of time
+Then, open **http://localhost:5173/** in your browser.
 
+To stop a server, click into its terminal and press 'Ctrl + C'.
 
+## Running the tests
 
+```bash
+cd server
+npm test
+```
 
+All tests should pass, the tests do not need the server to be running.
 
+## Notes
 
+- Data is stored in memory, so the two sample assignments will be reset every time the API server restarts.
