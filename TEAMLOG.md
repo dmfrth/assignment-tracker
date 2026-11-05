@@ -179,15 +179,51 @@ The site is much easier to read now and the buttons we had previously still work
   * *Reviewed:*
 
     * Ryan wrote the README, which Danielle looked over and approved. Danielle wrote the summary, which Ryan looked over and approved.
-
   * *Clean-clone check:*
 
     * PASS
 * **Handoff package:**
-Everything still works as expected, and now there are some updates to the Handoff package so whoever inherits our site will be able to understand it. 
+Everything still works as expected, and now there are some updates to the Handoff package so whoever inherits our site will be able to understand it.
 
   * *Commitments before next Day 2:*
 
     * Danielle: Look into the videos and readings for Module 3 so we can be prepared for next week's tasks.
     * Ryan: Finish any final "clean up" tasks before handing off the site
+
+
+## 2026-11-05 Day 2 Workshop:
+
+* **Present:** Danielle, Ryan
+* **Scribe:** Ryan
+* **Standup:**
+
+  * Danielle: Finish Handoff Package 
+Ryan : Clean up for milestone 2, Update teamlog
+* **Plan**:
+
+  * *Goals for today:*
+* Finish Handoff Package and milestone 2
+* **Build** / Shipped
+
+&#x20;  Set up client / server folders, created API contract, completed handoff package
+
+
+* **Review**:
+
+  * *Reviewed:*
+
+    * Ryan wrote the Teamlog, which Danielle looked over and approved. 
+Danielle wrote the Handoff Package, which Ryan looked over and approved.
+  * *Clean-clone check:*
+
+    * PASS
+* **Handoff package:**
+Everything still works as expected, and now there are some updates to the Handoff package so whoever inherits our site will be able to understand it.
+
+  * *Commitments before next Day 2:*
+
+    * Danielle: Look into the videos and readings for Module 4 so we can be prepared for next week's tasks.
+    * Ryan: Also going to look into videos / readings for week 4, there shouldn't be anything left for this project?
+
+
 
