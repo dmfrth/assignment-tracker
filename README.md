@@ -31,18 +31,23 @@ cd ..
 
 ## Running the application
 
-This application needs both client and server running at the same time, so we need to use two separate terminals.
+This application needs both client and server running at the same time, so we need to use two separate terminals. Please note: When you create the second terminal, you will be sent back to the root folder. You will have to run "cd assignment-tracker" before you run cd client.
 
 **Terminal 1: API (localhost:3001)**
 ```bash
 cd server
 npm run dev
 ```
+
+If running correctly, you should see "API running on http://localhost:3001"
+
 **Terminal 2: React app (localhost:5173)**
 ```bash
 cd client
 npm run dev
 ```
+
+If running correctly, you should see "Local: http://localhost:5173/"
 
 Then, open **http://localhost:5173/** in your browser.
 
