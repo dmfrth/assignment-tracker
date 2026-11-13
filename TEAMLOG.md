@@ -205,7 +205,7 @@ Ryan : Clean up for milestone 2, Update teamlog
 * Finish Handoff Package and milestone 2
 * **Build** / Shipped
 
-&#x20;  Set up client / server folders, created API contract, completed handoff package
+* Set up client / server folders, created API contract, completed handoff package
 
 
 * **Review**:
@@ -225,5 +225,42 @@ Everything still works as expected, and now there are some updates to the Handof
     * Danielle: Look into the videos and readings for Module 4 so we can be prepared for next week's tasks.
     * Ryan: Also going to look into videos / readings for week 4, there shouldn't be anything left for this project?
 
+## 2026-11-12 Day 2 Workshop:
 
+* **Present:** Danielle, Ryan
+* **Scribe:** Danielle
+* **Standup:**
+
+  * Danielle: We need to work on the HANDOVER.md file and create a 2 minute pitch for our web app. 
+  * Ryan: We need to work on the HANDOVER.md file and create a 2 minute pitch for our web app. 
+* **Plan**:
+
+  * *Goals for today:*
+
+    * Start filling out the HANDOVER.md file so it's ready for next week
+    * Run the site from a clean copy so we know if the README has any flaws
+    * Start the presentation for our two minute pitch & rehearse it
+* **Build**:
+
+  * *Shipped:*
+
+    * Presentation is complete
+    * Updated README after running site from a fresh clone
+    * Filled out the HANDOVER.md template
+* **Review**:
+
+  * *Reviewed:*
+
+    * Danielle downloaded a clean copy of the repository and was able to get everything running correctly.
+
+  * *Clean-clone check:*
+
+    * PASS
+* **Handoff package:**
+Everything works as expected, just need to let others know that when they download the repository, before they run any other commands, they need to switch to the milestone-2 branch so they have access to the most recent files.
+
+  * *Commitments before next Day 2:*
+
+    * Danielle: Decide who will give the presentation and who will move through the slides for us, and rehearse the presentation.
+    * Ryan: Decide who will give the presentation and who will move through the slides for us, and rehearse the presentation.
 
